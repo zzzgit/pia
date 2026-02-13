@@ -16,4 +16,5 @@
 - Ensure all generated code snippets follow these rules to maintain consistency across the codebase.
 
 ## This Project
-- 
+- **About This Project**: This project is a news (mainly headlines) fetching tool that uses AI for summary and analysis. It collects headlines from various sources and leverages AI/LLM to provide trend analysis and insights.
+- **Testing**: This project uses Mocha as its testing framework. Run tests with `npm test` or `npm run test:watch` for watch mode.
