@@ -4,7 +4,7 @@ const fetchHackerNewsTitles = async (start, end) => {
   const startSec = toUnixSeconds(start);
   const endSec = toUnixSeconds(end);
   const url = new URL("https://hn.algolia.com/api/v1/search_by_date");
-  url.searchParams.set("query", "LLM OR \"AI agent\" OR \"AI agents\" OR agentic");
+  url.searchParams.set("query", "LLM");
   url.searchParams.set("tags", "story");
   url.searchParams.set("numericFilters", `created_at_i>=${startSec},created_at_i<=${endSec}`);
   url.searchParams.set("hitsPerPage", "100");
@@ -17,3 +17,17 @@ const fetchHackerNewsTitles = async (start, end) => {
 };
 
 export { fetchHackerNewsTitles };
+
+// now test fetchHackerNewsTitles
+
+const testFetchHackerNewsTitles = async () => {
+ 
+
+  const start = new Date("2024-03-03T00:00:00Z");
+  const end = new Date("2024-03-04T00:00:00Z");
+  const titles = await fetchHackerNewsTitles(start, end);
+
+  console.log("Fetched Hacker News titles:", titles);
+};
+
+testFetchHackerNewsTitles()
