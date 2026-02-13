@@ -1,0 +1,15 @@
+{
+    "name": "pia-llm-trends",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "description": "Lightweight LLM/AI agent trend analyzer (title-only).",
+    "scripts": {
+        "start": "node src/index.js",
+        "test": "mocha",
+        "test:watch": "mocha --watch"
+    },
+    "devDependencies": {
+        "mocha": "^11.7.5"
+    }
+}
