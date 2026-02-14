@@ -1,15 +1,22 @@
 {
-    "name": "pia-llm-trends",
-    "version": "0.1.0",
-    "private": true,
+    "name": "pia",
+    "version": "0.1.1",
+    "public": true,
     "type": "module",
-    "description": "Lightweight LLM/AI agent trend analyzer (title-only).",
+    "description": "Lightweight LLM/AI agent trend analyzer.",
     "scripts": {
         "start": "node src/index.js",
         "test": "mocha",
-        "test:watch": "mocha --watch"
+        "lint:biome": "biome lint .",
+        "biome": "biome check --write ."
+    },
+    "engines": {
+        "node": "24"
     },
     "devDependencies": {
         "mocha": "^11.7.5"
+    },
+    "dependencies": {
+        "date-fns": "^4.1.0"
     }
 }
